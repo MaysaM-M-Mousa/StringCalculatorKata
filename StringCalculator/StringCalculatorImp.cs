@@ -10,10 +10,14 @@ public class StringCalculatorImp : StringCalculator
 {
     public int Add(string numbers)
     {
-        var numbersList = numbers.Split(",").ToList();
+        var commaDelimiter = ",";
+        var newLineDelimiter = "\n";
+
+
+        var numbersList = numbers.Split(commaDelimiter).ToList();
 
         var numbersListWithNewLineSupported = new List<List<string>>();
-        numbersList.ForEach(num => numbersListWithNewLineSupported.Add(num.Split("\n").ToList()));
+        numbersList.ForEach(num => numbersListWithNewLineSupported.Add(num.Split(newLineDelimiter).ToList()));
         
         var sum = 0;
 
