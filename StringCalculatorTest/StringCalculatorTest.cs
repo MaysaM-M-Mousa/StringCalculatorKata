@@ -45,4 +45,12 @@ public class StringCalculatorTest
         var result = _stringCalculator.Add("1,3\n6\n8,1");
         Assert.Equal(19, result);
     }
+
+
+    [Fact]
+    public void Add_UnknownNumberOfNumbersWithCustomizedDelimeter_ReturnsTheSumOfNumbers()
+    {
+        var result = _stringCalculator.Add("//!\n2!6!9!1");
+        Assert.Equal(18, result);
+    }
 }

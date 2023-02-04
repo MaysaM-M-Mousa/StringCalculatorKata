@@ -11,17 +11,21 @@ public class StringCalculatorImp : StringCalculator
     public int Add(string numbers)
     {
         var commaDelimiter = ",";
-        var newLineDelimiter = "\n";
+        var customDelimiter = "\n";
 
+        if (numbers.StartsWith("//"))
+        {
+            customDelimiter = numbers[2].ToString();
+        }
 
         var numbersList = numbers.Split(commaDelimiter).ToList();
 
-        var numbersListWithNewLineSupported = new List<List<string>>();
-        numbersList.ForEach(num => numbersListWithNewLineSupported.Add(num.Split(newLineDelimiter).ToList()));
+        var numbersListWithCustomDelimiterSupported = new List<List<string>>();
+        numbersList.ForEach(num => numbersListWithCustomDelimiterSupported.Add(num.Split(customDelimiter).ToList()));
         
         var sum = 0;
 
-        numbersListWithNewLineSupported
+        numbersListWithCustomDelimiterSupported
             .SelectMany(x => x)
             .ToList()
             .ForEach(num =>
