@@ -30,4 +30,12 @@ public class StringCalculatorTest
         var result = _stringCalculator.Add("1,6");
         Assert.Equal(7, result);
     }
+
+
+    [Fact]
+    public void Add_UnknownNumberOfNumbers_ReturnsTheSumOfNumbers()
+    {
+        var result = _stringCalculator.Add("1,6,3,2,1,0");
+        Assert.Equal(13, result);
+    }
 }

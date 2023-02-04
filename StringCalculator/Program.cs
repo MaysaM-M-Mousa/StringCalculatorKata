@@ -7,5 +7,7 @@ public class Program
         var calculator = new StringCalculatorImp();
 
         Console.WriteLine(calculator.Add(""));
+
+        Console.WriteLine(calculator.Add("1,2,6,5,8"));
     }
 }
