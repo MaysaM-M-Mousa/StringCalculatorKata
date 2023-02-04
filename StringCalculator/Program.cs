@@ -9,5 +9,7 @@ public class Program
         Console.WriteLine(calculator.Add(""));
 
         Console.WriteLine(calculator.Add("1,2,6,5,8"));
+
+        Console.WriteLine(calculator.Add("1,2\n3,8"));
     }
 }

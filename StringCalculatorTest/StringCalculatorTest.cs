@@ -38,4 +38,11 @@ public class StringCalculatorTest
         var result = _stringCalculator.Add("1,6,3,2,1,0");
         Assert.Equal(13, result);
     }
+
+    [Fact]
+    public void Add_UnknownNumberOfNumbersWithNewLineAsDelimeterSupported_ReturnsTheSumOfNumbers()
+    {
+        var result = _stringCalculator.Add("1,3\n6\n8,1");
+        Assert.Equal(19, result);
+    }
 }
