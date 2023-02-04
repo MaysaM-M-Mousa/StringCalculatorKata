@@ -40,6 +40,11 @@ public class StringCalculatorImp : StringCalculator
                     parsedNumber = 0;
                 }
 
+                if(parsedNumber > 1000)
+                {
+                    parsedNumber = 0;
+                }
+
                 sum += parsedNumber;
             });
 

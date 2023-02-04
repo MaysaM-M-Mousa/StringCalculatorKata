@@ -60,4 +60,11 @@ public class StringCalculatorTest
         Action result = () => _stringCalculator.Add("1,3,-2");
         Assert.Throws<Exception>(result);
     }
+
+    [Fact]
+    public void Add_PassingBigNumbers_IgnoringBigNumbersAndReturningSumWithoutThem()
+    {
+        var result = _stringCalculator.Add("2000,600,50,1");
+        Assert.Equal(651, result);
+    }
 }
