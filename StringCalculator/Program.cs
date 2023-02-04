@@ -13,5 +13,7 @@ public class Program
         Console.WriteLine(calculator.Add("1,2\n3,8"));
 
         Console.WriteLine(calculator.Add("//;\n1;2"));
+
+        Console.WriteLine(calculator.Add("3,5,-8"));
     }
 }

@@ -53,4 +53,11 @@ public class StringCalculatorTest
         var result = _stringCalculator.Add("//!\n2!6!9!1");
         Assert.Equal(18, result);
     }
+
+    [Fact]
+    public void Add_NegativeNumbers_ThrowsException()
+    {
+        Action result = () => _stringCalculator.Add("1,3,-2");
+        Assert.Throws<Exception>(result);
+    }
 }
